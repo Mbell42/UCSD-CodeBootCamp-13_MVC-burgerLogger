@@ -28,3 +28,5 @@ Progress:
 2020.03.17_10~~ - Initial Commit.  Created and cloned repository to my local drive.  I then imported 'instructions' folder from class files.  I then created empty folder structure and initialized 'readme.md'.
 
 2020.03.25_1128 - I added 'LICENSE.txt' to the project root folder, using the MIT License.
+
+2020.03.25_1132 - I installed npm module 'express' and created 'package-lock.json'.
