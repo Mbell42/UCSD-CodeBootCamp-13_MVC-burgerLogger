@@ -51,3 +51,5 @@ Progress:
 2020.03.28_1502 - For controller 'burgers_controller.js', I added dependencies, created empty router with express, and used modules.export to export the router.
 
 2020.03.28_1508 - For controller 'burgers_controller.js', I added pseudocode for each necessary route.
+
+2020.03.28_1517 - For controller 'burgers_controller.js', I added route logic for returning all Burgers.
