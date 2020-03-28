@@ -12,7 +12,7 @@ const router = express.Router();
 // CREATE ROUTES
 // Return/show all burgers in the database 
 // Define route as '/'
-router.get('/', function(req, res) {
+router.get('/', (req, res) => {
     burger.selectAll(function(data) {
         // Create handlebars object
         let hbsObject = {
@@ -25,7 +25,11 @@ router.get('/', function(req, res) {
 });
 
 // Create and add a new burger to the database
+// Define route as '/'
+router.get('/', (req, res) => {
 
+    
+})
 
 // Update an existing burger in the database
 

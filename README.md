@@ -53,3 +53,5 @@ Progress:
 2020.03.28_1508 - For controller 'burgers_controller.js', I added pseudocode for each necessary route.
 
 2020.03.28_1517 - For controller 'burgers_controller.js', I added route logic for returning all Burgers.
+
+2020.03.28_1522 - For controller 'burgers_controller.js', I began to add route logic for adding a new Burger to the database by defining the route, and I reviewed/updated all of my project files to use arrow function syntax.

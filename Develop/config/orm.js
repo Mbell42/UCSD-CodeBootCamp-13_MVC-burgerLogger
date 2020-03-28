@@ -34,7 +34,7 @@ function objToSql(ob) {
 // CRUD FUNCTIONS - 3 basic functions
 //selectAll()
 const orm = {
-    selectAll: function(table, cb) {
+    selectAll: (table, cb) => {
         // Retrieve all burgers from the database. 
         let queryString = 'SELECT * FROM ' + table + ';';
         connection.query(queryString, function(err, result) {
@@ -45,7 +45,7 @@ const orm = {
         });
     },
     // insertOne()
-    newBurger: function(table, cols, vals, cb) {
+    newBurger: (table, cols, vals, cb) => {
         // Create & save new burger
         var queryString = 'INSERT INTO ' + table;
 
@@ -58,7 +58,7 @@ const orm = {
         // Print concatenated queryString to console
         console.log(queryString);
 
-        connection.query(queryString, vals, function(err, result) {
+        connection.query(queryString, vals, (err, result) => {
         if (err) {
             throw err;
         }
@@ -67,7 +67,7 @@ const orm = {
         });
     },
     // updateOne()
-    updateBurger: function(table, objColVals, condition, cb) {
+    updateBurger: (table, objColVals, condition, cb) => {
         // Update a single burger with an id to 'devoured' status
         var queryString = 'UPDATE ' + table;
     
@@ -77,7 +77,7 @@ const orm = {
         queryString += condition;
         console.log(queryString);
         // Print concatenated queryString to console
-        connection.query(queryString, function(err, result) {
+        connection.query(queryString, (err, result) => {
           if (err) {
             throw err;
           }
