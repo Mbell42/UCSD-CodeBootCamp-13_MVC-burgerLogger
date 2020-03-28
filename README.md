@@ -38,4 +38,6 @@ Progress:
 
 2020.03.28_0708 - I completed initial setup, except for adding routes, to 'server.js' With the steps for 'App Setup' and 'DB Setup' complete, I will now begin step for 'Config Setup'.
 
-2020.03.28_0713 - I added code to connect Node to MySQL in 'connection.js'.  I will now begin coding 'orm.js'
+2020.03.28_0713 - I added code to connect Node to MySQL in 'connection.js'.  I will now begin coding 'orm.js'.
+
+2020.03.28_0736 - I have changed the format of the connection in 'connection.js', and added an error message for if the connection fails.  I then added the orm dependency to 'burger.js'.  I then added some pseudo-code to 'orm.js'.

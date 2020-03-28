@@ -29,6 +29,11 @@ app.use(bodyParser.json());
     // requests of content-type - application/x-ww-form-urlencoded
 app.use(bodyParser.urlencoded({ extended:true }));
 
+// SETUP HANDLEBARS
+const exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // INCLUDE ROUTES
 
 // SET UP PORT, LISTEN FOR REQUESTS
