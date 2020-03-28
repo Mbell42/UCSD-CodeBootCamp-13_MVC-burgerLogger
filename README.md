@@ -35,3 +35,5 @@ Progress:
 2020.03.28_0559 - I completed researching and practicing for this app by following a tutorial at 'https://bezkoder.com/node-js-express-sequelize-mysql/' by following along and creating a full-stack app from scratch using node,js,express,sequelize, and mysql.  After testing al functionality, I then added this project to '/_practice'.  I will now continue on the main project.
 
 2020.03.28_0649 - I finished building folder structure and adding required files with gitBash.  I then added pseudo-code directly from the instructions in each file to help give me a satrting point.  I then created 'schema.sql', and added the necessary code to drop, create, and use 'burgers_db', as well as create the 'burgers' table.  I then created 'seeds.sql', and added the necessary code to insert 4 burgers, whose names I got from the TV show 'Bob's Burgers'.
+
+2020.03.28_0708 - I completed initial setup, except for adding routes, to 'server.js' With the steps for 'App Setup' and 'DB Setup' complete, I will now begin step for 'Config Setup'.
