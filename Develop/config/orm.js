@@ -45,7 +45,7 @@ const orm = {
         });
     },
     // insertOne()
-    insertBurger: function(table, cols, vals, cb) {
+    newBurger: function(table, cols, vals, cb) {
         // Create & save new burger
         var queryString = 'INSERT INTO ' + table;
 
