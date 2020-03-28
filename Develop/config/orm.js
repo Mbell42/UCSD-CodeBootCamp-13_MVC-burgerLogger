@@ -67,8 +67,23 @@ const orm = {
         });
     },
     // updateOne()
-    // Update a single burger with an id to 'devoured' state
-
+    updateBurger: function(table, objColVals, condition, cb) {
+        // Update a single burger with an id to 'devoured' status
+        var queryString = 'UPDATE ' + table;
+    
+        queryString += ' SET ';
+        queryString += objToSql(objColVals);
+        queryString += ' WHERE ';
+        queryString += condition;
+        console.log(queryString);
+        // Print concatenated queryString to console
+        connection.query(queryString, function(err, result) {
+          if (err) {
+            throw err;
+          }
+          cb(result);
+        });
+      },
 };
 // Export the ORM object in module.exports
 module.exports = orm;

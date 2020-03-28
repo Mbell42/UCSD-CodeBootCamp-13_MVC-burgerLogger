@@ -43,3 +43,5 @@ Progress:
 2020.03.28_0736 - I have changed the format of the connection in 'connection.js', and added an error message for if the connection fails.  I then added the orm dependency to 'burger.js'.  I then added some pseudo-code to 'orm.js'.
 
 2020.03.28_0758 - For 'orm.js', I added two helper functions, one for assisting with SQL syntax, and one for converting object key/value pairs to SQL.  I then created a function for displaying all burgers, and a function for creating a new burger and adding it to the database.
+
+2020.03.28_0805 - For 'orm.js', I created a function for updating the status of a burger.  I will now begin the 'Model Setup' step, and will add code to 'burger.js' to call the orm functions.
