@@ -37,3 +37,5 @@ Progress:
 2020.03.28_0649 - I finished building folder structure and adding required files with gitBash.  I then added pseudo-code directly from the instructions in each file to help give me a satrting point.  I then created 'schema.sql', and added the necessary code to drop, create, and use 'burgers_db', as well as create the 'burgers' table.  I then created 'seeds.sql', and added the necessary code to insert 4 burgers, whose names I got from the TV show 'Bob's Burgers'.
 
 2020.03.28_0708 - I completed initial setup, except for adding routes, to 'server.js' With the steps for 'App Setup' and 'DB Setup' complete, I will now begin step for 'Config Setup'.
+
+2020.03.28_0713 - I added code to connect Node to MySQL in 'connection.js'.  I will now begin coding 'orm.js'
