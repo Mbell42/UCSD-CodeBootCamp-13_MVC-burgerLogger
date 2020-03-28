@@ -10,16 +10,21 @@ const burger = {
             cb(res);
         });
     },
-    newBurger: fuction(cols,vals,cb) {
+    newBurger: function(cols,vals,cb) {
             orm.newBurger("burgers", cols, vals, function(res) {
                 cb(res);
             });
-        },
-        updateBurger: function(condition, cb) {
+    },
+    updateBurger: function(condition, cb) {
             orm.deleteBurger("burgers", condition, function(res) {
                 cb(res);
             });
-        }
+    },
+    deleteBurger: function(condition, cb) {
+        orm.deleteBurger("burgers", condition, function(res) {
+            cb(res);
+        });
+    }
 };
 // Export at the end of the burger.js file.
 module.exports = burger;
