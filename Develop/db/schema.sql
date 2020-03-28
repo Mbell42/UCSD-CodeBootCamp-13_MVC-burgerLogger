@@ -12,7 +12,7 @@ USE burgers_db;
 
 /* Create burgers table */
 CREATE TABLE burgers (
-	id INT AUTO_INCREMENT ,
+	id INT AUTO_INCREMENT,
     burger_name varchar(60) NOT NULL,
     devoured BOOLEAN,
     PRIMARY KEY(id)
