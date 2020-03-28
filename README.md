@@ -30,3 +30,5 @@ Progress:
 2020.03.25_1128 - I added 'LICENSE.txt' to the project root folder, using the MIT License.
 
 2020.03.25_1132 - I installed npm module 'express' and created 'package-lock.json'.
+
+2020.03.28_0559 - I completed researching and practicing for this app by following a tutorial at <https://bezkoder.com/node-js-express-sequelize-mysql/> by following along and creating a full-stack app from scratch using node,js,express,sequelize, and mysql.  After testing al functionality, I then added this project to '/_practice'.  I will now continue on the main project.
