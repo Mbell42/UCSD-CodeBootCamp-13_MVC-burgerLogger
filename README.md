@@ -47,3 +47,5 @@ Progress:
 2020.03.28_1452 - For model 'burger.js', I added the Burger object and its associated methods.  I then used module.exports to export the Burger object.  I will next work on Controller Setup.
 
 2020.03.28_1458 - For model 'burger.js', I added deleteBurger method to the Burger object.
+
+2020.03.28_1502 - For controller 'burgers_controller.js', I added dependencies, created empty router with express, and used modules.export to export the router.
