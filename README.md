@@ -59,3 +59,5 @@ Progress:
 2020.03.28_1918 - For controller 'burgers_controller.js', I added route logic for adding a new Burger to the database and for updating an existing Burger in the database.
 
 2020.03.28_1923 - For controller 'burgers_controller.js', I added route logic for deleting a Burger from the database.
+
+2020.03.28_1941 - For view 'main.handlebars', I added dependencies and added the body section so it is able to be used by Handlebars.  For view 'index.handlebars', I added a Header section, and began a row section for Burgers waiting to be devoured.
