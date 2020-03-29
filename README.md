@@ -69,3 +69,5 @@ Progress:
 2020.03.28_1926 -  I added npm install for 'cors'.
 
 2020.03.28_1928 -  I added routes in 'server.js'
+
+2020.03.28_2145 -  I re-created database, and then ran nodeJS and solved bug issues with miss-spellings and an incorrect path.  These fixes were for 'connection.js' and 'burgers_controller.js' and 'server.js'.

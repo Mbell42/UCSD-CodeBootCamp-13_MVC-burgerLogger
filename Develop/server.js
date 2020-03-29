@@ -4,30 +4,35 @@ const express = require("express");
     // body-parser helps to parse the request and create the req.body object
 const bodyParser = require("body-parser");
     // cors provides Express middleware to enable CORS with various options.
-const cors = require("cors");
+// const cors = require("cors");
 
 // SET UP EXPRESS
 const app = express();
+
+// Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static("public"));
+
 // Setting up corsOptions.origin
-var corsOptions = {
-    origin: "http://localhost:4242"
-};
+// var corsOptions = {
+//     origin: "http://localhost:4242"
+// };
 // Set express to use corsOptions
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // Drop and re-create db if existing
-const db = require("./models");
-db.sequelize.sync(
-    { force: true }).then(() => {
-        console.log("Dropping and re-syncing db.");
-    }
-);
+// const db = require("./models");
+// db.sequelize.sync(
+//     { force: true }).then(() => {
+//         console.log("Dropping and re-syncing db.");
+//     }
+// );
 
 // PARSE 
     // requests of content-type - application/json
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
     // requests of content-type - application/x-ww-form-urlencoded
 app.use(bodyParser.urlencoded({ extended:true }));
+app.use(express.json());
 
 // SETUP HANDLEBARS
 const exphbs = require("express-handlebars");

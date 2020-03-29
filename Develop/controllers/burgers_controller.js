@@ -3,7 +3,7 @@
 const express = require("express");
 
 // burger.js
-const burger = require("burger");
+const burger = require("../models/burger.js");
 
 
 // Create the router for the app
