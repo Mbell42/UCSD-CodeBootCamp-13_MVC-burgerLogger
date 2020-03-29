@@ -10,7 +10,7 @@ const burger = require("burger");
 const router = express.Router();
 
 // CREATE ROUTES
-// Return/show all burgers in the database 
+// SHOW ALL burgers in the database 
 // Define route as '/'
 router.get('/', (req, res) => {
     burger.selectAll(function(data) {
@@ -24,17 +24,49 @@ router.get('/', (req, res) => {
     });
 });
 
-// Create and add a new burger to the database
+// CREATE and add a new burger to the database
 // Define route as '/'
-router.get('/', (req, res) => {
+router.post('/', (req, res) => {
+    burger.newBurger(
+        // Set new Burger parameters
+        ['burger_name', 'devoured'],
+        [req.body.burger_name, req.body.devoured],
+        result => {
+            // Send back the database id of the newly created Burger
+            res.json({ id: result.insertId });
+        }
+    );
+});
 
+// UPDATE an existing burger in the database
+router.put('api/burgers/:id', (req, res) => {
+    // Set condition to id for identifying Burger in database
+    let condition = "id =" + req.params.id;
+
+    // Log the id of the Burger to be updated
+    console.log("condition: ", condition);
     
-})
+    burger.updateBurger(
+        {
+            devoured: req.body.devoured
+        },
+        condition,
+        result => {
+            // If the Burger is not found...
+            if(result == 0) {
+                // Send a 404 error
+                console.log("Burger not found in database!");
+                return res.status(404).end();
+            } else {
+                // Send back successful update
+                console.log("Burger status updated in database!"); 
+                res.status(200).end();
+            }
+        }
+    );
+});
 
-// Update an existing burger in the database
-
-
-// Delete a burger from the database
+// DELETE a burger from the database
 
 
 
