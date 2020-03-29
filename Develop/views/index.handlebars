@@ -7,39 +7,84 @@
             <h1 class = "display-4">Eat Da Burger</h1>
         </div>
     </div>
-</div>
 
-{{!-- Burgers waiting to be Devoured --}}
-<div class = "row">
+
+    {{!-- Burgers waiting to be Devoured section --}}
+    <div class = "row">
+        <div class = "col-md-4">
+            <div class = "card text-light bg-dark" style="max-width: 50%">
+                <div class="card-header">
+                    <strong>Burgers Waiting to Be Devoured</strong>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        {{!-- Display Burgers waiting to be Devoured --}}
+                        {{ #each burgers}}
+                        {{ #unless devoured }}
+                        <span>
+                            <strong>
+                                {{ this.id }} - {{ this.burger_name }}
+                            </strong>
+                        </span>
+                        {{!-- Button to Devour a Burger, updating its state to Devoured --}}
+                        <button type = "button" class = "eatBurger btn btn-info" id = "eatBtn"
+                            data-id = "{{ this.id }}" data-newDevoured = "{{ devour }}">
+                            <span class = "fas fa-hamburger"></span>
+                        </button>
+                        <hr>
+                        {{ /unless }}
+                        {{ /each }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Input to add new Burgers --}}
     <div class = "col-md-4">
         <div class = "card text-light bg-dark" style="max-width: 50%">
             <div class="card-header">
-                <strong>Burgers Waiting to Be Devoured</strong>
+                <strong>Add a new Burger</strong>
             </div>
-            <div class="card-body">
+            <div class = "card-body" id = "newBurgerCard">
+                <form class = "create-form">
+                    <div class = " form-group">
+                        <label for = "addBurger" id = "color-override">New Burger: </label>
+                        <input type = "text" id = "addBurger" name = "burger" placeholder = "Add a new Burger">
+                        
+                        {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
+                        <button type = "submit" class = "btn btn-success" id="newBurger">
+                            <span class = "fas fa-plus"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{!-- Devoured Burgers section --}}
+    <div class = "col-md-4">
+        <div class = "card text-light bg-dark" style="max-width: 50%">
+            <div class="card-header">
+                <strong>Devoured Burgers</strong>
+            </div>
+            <div class = "card-body">
                 <ul>
-                    
+                    {{!-- Display Burgers that have been Devoured --}}
+                    {{ #each burgers }}
+                    {{ #if devoured }}
+
+                    {{!-- Button to delete a Devoured Burger --}}
+                    <button type = "button" class = "deleteBurger btn btn-danger" id = "deleteBtn"
+                        data-id = "{{ this.id }}" data-newDevoured = "{{devour}}">
+                        <span class = "fa fa-trash"></span>
+                    </button>
+
+                    <hr>
+                    {{ /if }}
+                    {{ /each }}
                 </ul>
             </div>
-        </div>
-    </div>
-</div>
-
-{{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
-{{!-- Input to add new Burgers --}}
-<div class = "col-md-4">
-    <div class = "card text-light bg-dark" style="max-width: 50%">
-        <div class="card-header">
-            <strong>Add a new Burger</strong>
-        </div>
-    </div>
-</div>
-
-{{!-- Devoured Burgers --}}
-<div class = "col-md-4">
-    <div class = "card text-light bg-dark" style="max-width: 50%">
-        <div class="card-header">
-            <strong>Devoured Burgers</strong>
         </div>
     </div>
 </div>
