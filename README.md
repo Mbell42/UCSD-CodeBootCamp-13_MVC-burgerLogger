@@ -73,3 +73,5 @@ Progress:
 2020.03.28_2145 -  I re-created database, and then ran nodeJS and solved bug issues with miss-spellings and an incorrect path.  These fixes were for 'connection.js' and 'burgers_controller.js' and 'server.js'.
 
 2020.03.28_2148 -  I added app to Heroku, connected project GitHub repository, and enabled automatic deploys.
+
+2020.03.28_2151 - I changed app folder structure such that the app resides in the github repository root folder.
