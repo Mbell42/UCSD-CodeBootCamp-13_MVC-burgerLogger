@@ -75,3 +75,5 @@ Progress:
 2020.03.28_2148 -  I added app to Heroku, connected project GitHub repository, and enabled automatic deploys.
 
 2020.03.28_2151 - I changed app folder structure such that the app resides in the github repository root folder.
+
+2020.03.28_2155 - I am now trying to track down a bug where the response for the hosted url for the app on Heroku reads 'Method Not Allowed'.
