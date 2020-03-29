@@ -15,12 +15,12 @@ const router = express.Router();
 router.get('/', (req, res) => {
     burger.selectAll(function(data) {
         // Create handlebars object
-        let hbsObject = {
+        let object = {
             burgers: data
         };
         // Log handlebars object to console and render it to browser
-        console.log(hbsObject);
-        res.render('index', hbsObject)     
+        console.log(object);
+        res.render('index', object);     
     });
 });
 

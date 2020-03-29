@@ -77,3 +77,5 @@ Progress:
 2020.03.28_2151 - I changed app folder structure such that the app resides in the github repository root folder.
 
 2020.03.28_2155 - I am now trying to track down a bug where the response for the hosted url for the app on Heroku reads 'Method Not Allowed'.
+
+2020.03.28_2218 - I updated '.gitignore' to only include node_modules.  I then added a missing semicolon in 'burgers_controller.js', and updated quote styles in 'server.js' and changed a parameter name in 'orm.js'.

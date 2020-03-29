@@ -34,13 +34,11 @@ function objToSql(ob) {
 // CRUD FUNCTIONS - 3 basic functions
 //selectAll()
 const orm = {
-    selectAll: (table, cb) => {
+    selectAll: (tableInput, cb) => {
         // Retrieve all burgers from the database. 
-        let queryString = 'SELECT * FROM ' + table + ';';
-        connection.query(queryString, function(err, result) {
-            if (err) {
-                throw err;
-            }
+        let queryString = 'SELECT * FROM ' + tableInput + ';';
+        connection.query(queryString, (err, result) => {
+            if (err) throw err;
             cb(result);
         });
     },
