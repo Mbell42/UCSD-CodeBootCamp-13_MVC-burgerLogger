@@ -67,7 +67,15 @@ router.put('api/burgers/:id', (req, res) => {
 });
 
 // DELETE a burger from the database
-
+router.delete('/api/burgers/:id', (req, res) => {
+    if(result.affectedRows == 0) {
+        // If no rows were deleted, send back a 404 error
+        return res.status(200).end();
+    } else {
+        // Send back successful deletion
+        res.status(200).end();
+    }
+})
 
 
 // Export the router at the end of your file.

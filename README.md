@@ -57,3 +57,5 @@ Progress:
 2020.03.28_1522 - For controller 'burgers_controller.js', I began to add route logic for adding a new Burger to the database by defining the route, and I reviewed/updated all of my project files to use arrow function syntax.
 
 2020.03.28_1918 - For controller 'burgers_controller.js', I added route logic for adding a new Burger to the database and for updating an existing Burger in the database.
+
+2020.03.28_1923 - For controller 'burgers_controller.js', I added route logic for deleting a Burger from the database.
