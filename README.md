@@ -67,3 +67,5 @@ Progress:
 2020.03.28_1926 - For view 'index.handlebars', I completed each section, added a form and button for adding 'new' Burgers, added a button for updating the status of a Burger from 'waiting to be devoured' to 'devoured', and added a button for removing Burgers that have been 'devoured'.  I then reviewed spelling in each file.
 
 2020.03.28_1926 -  I added npm install for 'cors'.
+
+2020.03.28_1928 -  I added routes in 'server.js'
