@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 
 // SET UP EXPRESS
 const app = express();
+var PORT = process.env.PORT || 8080;
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -28,11 +29,11 @@ app.use(express.static("public"));
 // );
 
 // PARSE 
-    // requests of content-type - application/json
-// app.use(bodyParser.json());
     // requests of content-type - application/x-ww-form-urlencoded
 app.use(bodyParser.urlencoded({ extended:true }));
-app.use(express.json());
+// requests of content-type - application/json -- USE LINE 34 or 35. 
+app.use(bodyParser.json());
+// app.use(express.json());
 
 // SETUP HANDLEBARS
 const exphbs = require("express-handlebars");

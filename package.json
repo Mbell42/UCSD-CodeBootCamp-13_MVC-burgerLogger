@@ -1,13 +1,13 @@
 {
-  "name": "develop",
+  "name": "mvc-burger-logger",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Users can create burgers that will be added to the display, and can 'eat' them to remove their counters",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Matthew Bell",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",

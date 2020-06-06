@@ -12,9 +12,9 @@ USE burgers_db;
 
 /* Create burgers table */
 CREATE TABLE burgers (
-	id INT AUTO_INCREMENT,
+	id INT AUTO_INCREMENT NOT NULL,
     burger_name varchar(60) NOT NULL,
-    devoured BOOLEAN,
+    devoured BOOLEAN DEFAULT false,
     PRIMARY KEY(id)
 );
 
