@@ -75,6 +75,7 @@
                     {{ #if devoured }}
 
                     {{!-- Button to delete a Devoured Burger --}}
+                    <span><p> {{this.id}} - {{this.burger_name}} </p></span>
                     <button type = "button" class = "deleteBurger btn btn-danger" id = "deleteBtn"
                         data-id = "{{ this.id }}" data-newDevoured = "{{devour}}">
                         <span class = "fa fa-trash"></span>

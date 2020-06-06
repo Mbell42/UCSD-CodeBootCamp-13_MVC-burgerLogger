@@ -82,6 +82,21 @@ const orm = {
           cb(result);
         });
       },
+
+      deleteBurger: function(table, condition, cb) {
+        var queryString = 'DELETE FROM ' + table;
+        queryString += ' WHERE ';
+        queryString += condition;
+    
+        console.log("queryString", queryString);
+    
+        connection.query(queryString, function(err, result) {
+          if (err) {
+            throw err;
+          }
+          cb(result);
+        });
+      }
 };
 // Export the ORM object in module.exports
 module.exports = orm;

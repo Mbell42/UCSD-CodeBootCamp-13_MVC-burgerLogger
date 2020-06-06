@@ -8,7 +8,6 @@ const bodyParser = require("body-parser");
 
 // SET UP EXPRESS
 const app = express();
-var PORT = process.env.PORT || 8080;
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
