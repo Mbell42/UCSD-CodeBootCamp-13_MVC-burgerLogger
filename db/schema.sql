@@ -4,11 +4,7 @@
 /* ALTER USER 'root'@'localHost' IDENTIFIED WITH mysql_native_password BY 'root'; */
 
 /* Create database */
-DROP DATABASE IF EXISTS burgers_db;
-
-CREATE DATABASE burgers_db;
-
-USE burgers_db;
+USE xxfojd8n7rie4cxo;
 
 /* Create burgers table */
 CREATE TABLE burgers (
