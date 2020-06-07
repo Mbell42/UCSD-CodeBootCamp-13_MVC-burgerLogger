@@ -19,8 +19,8 @@
                 <div class="card-body">
                     <ul>
                         {{!-- Display Burgers waiting to be Devoured --}}
-                        {{ #each burgers}}
-                        {{ #unless devoured }}
+                        {{#each burgers}}
+                        {{#unless devoured }}
                         <span>
                             <strong>
                                 {{ this.id }} - {{ this.burger_name }}
@@ -32,8 +32,8 @@
                             <span class = "fas fa-hamburger"></span>
                         </button>
                         <hr>
-                        {{ /unless }}
-                        {{ /each }}
+                        {{/unless }}
+                        {{/each }}
                     </ul>
                 </div>
             </div>
@@ -71,8 +71,8 @@
             <div class = "card-body">
                 <ul>
                     {{!-- Display Burgers that have been Devoured --}}
-                    {{ #each burgers }}
-                    {{ #if devoured }}
+                    {{#each burgers }}
+                    {{#if devoured }}
 
                     {{!-- Button to delete a Devoured Burger --}}
                     <span><p> {{this.id}} - {{this.burger_name}} </p></span>
@@ -82,8 +82,8 @@
                     </button>
 
                     <hr>
-                    {{ /if }}
-                    {{ /each }}
+                    {{/if }}
+                    {{/each }}
                 </ul>
             </div>
         </div>

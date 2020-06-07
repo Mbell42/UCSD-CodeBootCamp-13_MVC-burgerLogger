@@ -3,11 +3,12 @@
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-    host: "localhost",
-    port: 8080,
-    user: "root",
-    password: "rootroot",
-    database: "burgers_db",
+    host: "qf5dic2wzyjf1x5x.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    port: 3306,
+    user: "c16xamdhkh4cqjzk",
+    password: "v4iwdegei1g6oeol",
+    database: "j0yplfhb4ou6tmjo",
+    dialect: "mysql"
        // pool is optional, it will be used for Sequelize connection pool configuration:
     // pool: {
     //     // max: maximum number of connection in pool

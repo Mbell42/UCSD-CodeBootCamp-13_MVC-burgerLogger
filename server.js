@@ -46,6 +46,6 @@ app.use(routes);
 
 // SET UP PORT, LISTEN FOR REQUESTS
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+app.listen(PORT, function() {
     console.log(`Server is running on port ${PORT}.`);
 });
