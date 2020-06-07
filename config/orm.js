@@ -43,22 +43,21 @@ const orm = {
         });
     },
     // insertOne()
-    newBurger: (table, cols, vals, cb) => {
-        // Create & save new burger
-        var queryString = 'INSERT INTO ' + table;
-
-        queryString += ' (';
-        queryString += cols.toString();
-        queryString += ') ';
-        queryString += 'VALUES (';
-        queryString += printQuestionMarks(vals.length);
-        queryString += ') ';
-        // Print concatenated queryString to console
-        console.log(queryString);
-
-        connection.query(queryString, vals, (err, result) => {
+    newBurger: function(table, cols, vals, cb) {
+      var queryString = 'INSERT INTO ' + table;
+  
+      queryString += ' (';
+      queryString += cols.toString();
+      queryString += ') ';
+      queryString += 'VALUES (';
+      queryString += printQuestionMarks(vals.length);
+      queryString += ') ';
+  
+      console.log(queryString);
+  
+      connection.query(queryString, vals, function(err, result) {
         if (err) {
-            throw err;
+          throw err;
         }
 
         cb(result);
@@ -83,6 +82,7 @@ const orm = {
         });
       },
 
+      // deleteOne
       deleteBurger: function(table, condition, cb) {
         var queryString = 'DELETE FROM ' + table;
         queryString += ' WHERE ';
