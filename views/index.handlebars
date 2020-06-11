@@ -38,53 +38,54 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    {{!-- Input to add new Burgers --}}
-    <div class = "col-md-4">
-        <div class = "card text-light bg-dark" style="max-width: 50%">
-            <div class="card-header">
-                <strong>Add a new Burger</strong>
-            </div>
-            <div class = "card-body" id = "newBurgerCard">
-                <form class = "create-form">
-                    <div class = " form-group">
-                        <label for = "addBurger" id = "color-override">New Burger: </label>
-                        <input type = "text" id = "addBurger" name = "burger" placeholder = "Add a new Burger">
-                        
-                        {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
-                        <button type = "submit" class = "btn btn-success" id="newBurger">
-                            <span class = "fas fa-plus"></span>
-                        </button>
-                    </div>
-                </form>
+
+        {{!-- Input to add new Burgers --}}
+        <div class = "col-md-4">
+            <div class = "card text-light bg-dark" style="max-width: 50%">
+                <div class="card-header">
+                    <strong>Add a new Burger</strong>
+                </div>
+                <div class = "card-body" id = "newBurgerCard">
+                    <form class = "create-form">
+                        <div class = " form-group">
+                            <label for = "addBurger" id = "color-override">New Burger: </label>
+                            <input type = "text" id = "addBurger" name = "burger" placeholder = "Add a new Burger">
+                            
+                            {{!-- Create a button in index.handlebars that will submit the user input into the database. --}}
+                            <button type = "submit" class = "btn btn-success" id="newBurger">
+                                <span class = "fas fa-plus"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    {{!-- Devoured Burgers section --}}
-    <div class = "col-md-4">
-        <div class = "card text-light bg-dark" style="max-width: 50%">
-            <div class="card-header">
-                <strong>Devoured Burgers</strong>
-            </div>
-            <div class = "card-body">
-                <ul>
-                    {{!-- Display Burgers that have been Devoured --}}
-                    {{#each burgers }}
-                    {{#if devoured }}
+        {{!-- Devoured Burgers section --}}
+        <div class = "col-md-4">
+            <div class = "card text-light bg-dark" style="max-width: 50%">
+                <div class="card-header">
+                    <strong>Devoured Burgers</strong>
+                </div>
+                <div class = "card-body">
+                    <ul>
+                        {{!-- Display Burgers that have been Devoured --}}
+                        {{#each burgers }}
+                        {{#if devoured }}
 
-                    {{!-- Button to delete a Devoured Burger --}}
-                    <span><p> {{this.id}} - {{this.burger_name}} </p></span>
-                    <button type = "button" class = "deleteBurger btn btn-danger" id = "deleteBtn"
-                        data-id = "{{ this.id }}" data-newDevoured = "{{devour}}">
-                        <span class = "fa fa-trash"></span>
-                    </button>
+                        {{!-- Button to delete a Devoured Burger --}}
+                        <span><p> {{this.id}} - {{this.burger_name}} </p></span>
+                        <button type = "button" class = "deleteBurger btn btn-danger" id = "deleteBtn"
+                            data-id = "{{ this.id }}" data-newDevoured = "{{devour}}">
+                            <span class = "fa fa-trash"></span>
+                        </button>
 
-                    <hr>
-                    {{/if }}
-                    {{/each }}
-                </ul>
+                        <hr>
+                        {{/if }}
+                        {{/each }}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
